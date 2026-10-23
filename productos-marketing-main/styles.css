@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: gray;
+}
+h1{
+    display: flex;
+    justify-content: center;
+}
+.contenedor {
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.termo{
+    background-color: blue;
+    margin: 2%;
+    box-shadow: 0 0 10px 10px rgb(0, 136, 255);
+    border-radius: 5px;
+}
+.ventilador{
+    background-color: green;
+    margin: 2%;
+    box-shadow: 0 0 10px 10px rgb(4, 118, 0);
+    border-radius: 5px;
+}
+.relojDeportivo{
+    background-color: red;
+    margin: 2%;
+    box-shadow: 0 0 10px 10px rgb(255, 0, 0);
+    border-radius: 5px;
+}
+.relojModerno{
+    background-color: orange;
+    color: black;
+    margin: 2%;
+    box-shadow: 0 0 10px 10px rgb(255, 174, 0);
+    border-radius: 5px;
+}
+.contenedor h2{
+    color: black;
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+}
+.relojModerno:hover{
+    transform: translateY(-5px);
+}
+.termo:hover{
+    transform: translateY(-5px);
+}
+.relojDeportivo:hover{
+    transform: translateY(-5px);
+}
+.ventilador:hover{
+    transform: translateY(-5px);
+}
+img{
+    height: 30%;
+    width: 100%;
+}
