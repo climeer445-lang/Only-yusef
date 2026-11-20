@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="shortcut icon" href="images/icon-removebg-preview.png" type="images/jpg">
+    <title>Flexbox y Grid</title>
+</head>
+
+<body class="bg-[#F0F8FF] text-[#62516F]">
+
+    <header>
+    <nav class="bg-[#B0C4DE] p-4">
+        <ul class="flex flex-wrap justify-center gap-6 text-sm">
+           <li><a class="hover:text-blue-200" href="index.html">inicio</a></li>
+                <li><a class="hover:text-blue-200" href="colores.html">Colores,bordes y efectos</a></li>
+                <li><a class="hover:text-blue-200" href="espaciado.html">Espaciado y dimensiones</a></li>
+                <li><a class="hover:text-blue-200" href="flexbox.html">Flexbox y Grid</a></li>
+                <li><a class="hover:text-blue-200" href="posicion.html">Posicion e interaccion</a></li>
+                <li><a class="hover:text-blue-200" href="transformaciones.html">transiciones y animaciones</a></li>
+                <li><a class="hover:text-blue-200" href="tipografiaytexto.html">tipografia y texto</a></li>
+
+        </ul>
+    </nav>
+    </header>
+    <div class="text-center mt-8 mb-8">
+        <img src="images/hachiware2.gif" alt="Hachiware"
+             class="w-100 object-contain mx-auto mb-3">
+
+        <h1 class="text-3xl font-bold text-[#6389B5]">
+            Colores, bordes y efectos visuales
+        </h1>
+
+        <p class="mt-2">
+            Ejemplos de clases y utilidades de Tailwind CSS v4.
+        </p>
+    </div>
+
+    <main class="m-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <!-- Color de fondo -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Color de fondo</h2>
+            <p class="mt-2">Aplica el color amarillo de tono 500 como fondo del elemento, cubriendo toda su caja incluyendo el área del relleno interior.</p>
+            <div class="bg-blue-500 h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Color del borde -->
+        <section class="bg-[#DCEBFA] border-4 rounded-xl border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Color del borde</h2>
+            <p class="mt-2">Añade un borde de un píxel y le asigna el color rosa de tono 400.</p>
+            <div class="border border-pink-400 bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Sombra de caja -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Sombra de caja</h2>
+            <p class="mt-2">Proyecta una sombra mediana alrededor de la caja, dando sensación de elevación, como en las tarjetas.</p>
+            <div class="bg-white h-16 rounded-lg shadow-2xl shadow-black/60 mt-3"></div>
+        </section>
+
+        <!-- Opacidad -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Opacidad</h2>
+            <p class="mt-2">Reduce la opacidad del elemento al setenta y cinco por ciento, junto con todo su contenido.</p>
+            <div class="bg-blue-500 opacity-75 h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Radio de borde -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Radio de borde</h2>
+            <p class="mt-2">Redondea las esquinas con un radio grande, suavizando tarjetas, botones e imágenes.</p>
+            <div class="bg-blue-400 rounded-full h-16 mt-3"></div>
+        </section>
+
+        <!-- Ancho de borde -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Ancho de borde</h2>
+            <p class="mt-2">Establece un ancho de borde de cuatro píxeles, produciendo un contorno grueso y visible.</p>
+            <div class="border-4 border-blue-500 bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Estilo de borde -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Estilo de borde</h2>
+            <p class="mt-2">Cambia el estilo del borde a segmentos discontinuos, común en zonas de arrastre de archivos.</p>
+            <div class="border-2 border-dashed border-blue-500 bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Colapso de borde -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Colapso de borde</h2>
+            <p class="mt-2 mb-4">Fusiona los bordes de celdas adyacentes de una tabla en una única línea compartida.</p>
+            <table class="border-collapse border border-blue-400 w-full text-left">
+                <thead>
+                    <tr class="bg-blue-200">
+                        <th class="border border-blue-400 p-2">Celda 1</th>
+                        <th class="border border-blue-400 p-2">Celda 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-blue-400 p-2">Dato A</td>
+                        <td class="border border-blue-400 p-2">Dato B</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-blue-400 p-2">Dato C</td>
+                        <td class="border border-blue-400 p-2">Dato D</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Bordes separados -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Bordes separados</h2>
+            <p class="mt-2 mb-4">Mantiene los bordes de cada celda independientes y deja un espacio de 4px entre ellos.</p>
+            <table class="border-separate border-spacing-1 border border-blue-400 w-full text-left">
+                <thead>
+                    <tr class="bg-blue-200">
+                        <th class="border border-blue-400 p-2 rounded">Celda 1</th>
+                        <th class="border border-blue-400 p-2 rounded">Celda 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-blue-400 p-2 rounded">Dato A</td>
+                        <td class="border border-blue-400 p-2 rounded">Dato B</td>
+                    </tr>
+                    <tr>
+                        <td class="border border-blue-400 p-2 rounded">Dato C</td>
+                        <td class="border border-blue-400 p-2 rounded">Dato D</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Contorno -->
+        <section class="bg-[#DCEBFA] border border-[#A9C7E8] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Contorno</h2>
+            <p class="mt-2 mb-4">Haz clic en las cajas de texto para notar la diferencia al seleccionarlas.</p>
+            <div class="flex flex-col gap-3">
+                <input type="text" placeholder="Con contorno por defecto" class="p-2 rounded bg-white">
+                <input type="text" placeholder="Con focus:outline-none" class="focus:outline-none p-2 rounded bg-white">
+            </div>
+        </section>
+
+        <!-- Borde -->
+        <section class="bg-[#DCEBFA] border border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Borde</h2>
+            <p class="mt-2">Añade un borde de un píxel en los cuatro lados y lo colorea de negro.</p>
+            <div class="border border-black bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Borde superior -->
+        <section class="bg-[#DCEBFA] rounded-xl border-t-2 border-black p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Borde superior</h2>
+            <p class="mt-2">Aplica un borde negro de dos píxeles solo en el lado superior del elemento.</p>
+            <div class="border-t-2 border-black bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Borde derecho -->
+        <section class="bg-[#DCEBFA] border-r-4 border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Borde derecho</h2>
+            <p class="mt-2">Aplica un borde negro grueso de cuatro píxeles solo en el lado derecho.</p>
+            <div class="border-r-4 border-black bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Borde izquierdo -->
+        <section class="bg-[#DCEBFA] border-l-4 border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Borde izquierdo</h2>
+            <p class="mt-2">Añade un borde negro de un píxel solo en el lado izquierdo, frecuente en citas destacadas.</p>
+            <div class="border-l-4 border-black bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Borde inferior -->
+        <section class="bg-[#DCEBFA] border-b-4 border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Borde inferior</h2>
+            <p class="mt-2">Añade un borde negro únicamente en la parte inferior, típico como separador.</p>
+            <div class="border-b-4 border-black bg-white h-16 rounded-lg mt-3"></div>
+        </section>
+
+        <!-- Opacidad de borde -->
+        <section class="bg-[#DCEBFA] border-4 border-indigo-500/50 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Opacidad de borde</h2>
+            <p class="mt-2">Colorea el borde de índigo con cincuenta por ciento de opacidad, usando la sintaxis con barra de v4.</p>
+        </section>
+
+        <!-- Dividir verticalmente -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold mb-4">Dividir verticalmente</h2>
+            <div class="divide-y divide-blue-400">
+                <p class="py-2">Primer elemento</p>
+                <p class="py-2">Segundo elemento</p>
+                <p class="py-2">Tercer elemento</p>
+            </div>
+        </section>
+
+        <!-- Dividir horizontalmente -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold mb-4">Dividir horizontalmente</h2>
+            <div class="flex divide-x divide-blue-400">
+                <p class="px-2">Primero</p>
+                <p class="px-2">Segundo</p>
+                <p class="px-2">Tercero</p>
+            </div>
+        </section>
+
+        <!-- Opacidad de división -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold mb-4">Opacidad de división</h2>
+            <div class="divide-y divide-black/75">
+                <p class="py-2">Primer elemento</p>
+                <p class="py-2">Segundo elemento</p>
+                <p class="py-2">Tercer elemento</p>
+            </div>
+        </section>
+
+        <!-- Estilo de división -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold mb-4">Estilo de división</h2>
+            <div class="divide-y divide-dashed">
+                <p class="py-2">Primer elemento</p>
+                <p class="py-2">Segundo elemento</p>
+                <p class="py-2">Tercer elemento</p>
+            </div>
+        </section>
+
+        <!-- Ancho de división -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold mb-4">Ancho de división</h2>
+            <div class="divide-y-4 divide-blue-300">
+                <p class="py-2">Primer elemento</p>
+                <p class="py-2">Segundo elemento con línea gruesa</p>
+                <p class="py-2">Tercer elemento</p>
+            </div>
+        </section>
+
+        <!-- Filtro -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] grayscale-50 p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold mb-4">Escala de grises</h2>
+            <p>Este bloque tiene sus colores apagados al 50% hacia una escala de grises.</p>
+        </section>
+
+        <!-- Filtro de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Filtro de fondo</h2>
+            <p class="backdrop-blur-sm bg-white/20 font-bold p-3 m-3 rounded">Desenfoca ligeramente lo que hay detrás del elemento, creando el efecto de vidrio esmerilado.</p>
+        </section>
+
+        <!-- Opacidad de filtro de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Opacidad de filtro de fondo</h2>
+            <p class="backdrop-opacity-50 bg-white/20 font-bold p-3 m-3 rounded">Aplica una opacidad del cincuenta por ciento al filtro del fondo, atenuando lo que se ve a través.</p>
+        </section>
+
+        <!-- Desenfoque de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Desenfoque de fondo</h2>
+            <p class="backdrop-blur-sm bg-white/20 font-bold p-3 m-3 rounded">Desenfoca suavemente el contenido situado detrás del elemento.</p>
+        </section>
+
+        <!-- Brillo de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Brillo de fondo</h2>
+            <p class="backdrop-brightness-75 bg-white/20 font-bold p-3 m-3 rounded">Reduce al setenta y cinco por ciento el brillo del contenido que se ve detrás del elemento.</p>
+        </section>
+
+        <!-- Escala de grises de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Escala de grises de fondo</h2>
+            <p class="backdrop-grayscale-50 bg-white/20 font-bold p-3 m-3 rounded">Desatura a medias el contenido de fondo visible a través del elemento, sin afectar al elemento.</p>
+        </section>
+
+        <!-- Rotación de matiz de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Rotación de matiz de fondo</h2>
+            <p class="backdrop-hue-rotate-90 bg-white/20 font-bold p-3 m-3 rounded">Gira noventa grados el matiz de los colores del fondo visible a través del elemento.</p>
+        </section>
+
+        <!-- Inversión de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Inversión de fondo</h2>
+            <p class="backdrop-invert bg-white/20 font-bold p-3 m-3 rounded">Invierte por completo los colores del fondo visible, generando un efecto de negativo fotográfico.</p>
+        </section>
+
+        <!-- Opacidad de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Opacidad de fondo</h2>
+            <p class="backdrop-opacity-50 bg-white/20 font-bold p-3 m-3 rounded">Aplica una opacidad del cincuenta por ciento al filtro del fondo, atenuando lo que se ve a través.</p>
+        </section>
+
+        <!-- Saturación de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Saturación de fondo</h2>
+            <p class="backdrop-saturate-150 bg-white/20 font-bold p-3 m-3 rounded">Aumenta un cincuenta por ciento la saturación del fondo visible, haciendo los colores más vivos.</p>
+        </section>
+
+        <!-- Sepia de fondo -->
+        <section class="bg-linear-to-r from-pink-300 via-yellow-200 to-cyan-300 rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Sepia de fondo</h2>
+            <p class="backdrop-sepia-50 bg-white/20 font-bold p-3 m-3 rounded">Aplica un tono sepia del cincuenta por ciento al fondo visible, con aspecto de foto antigua.</p>
+        </section>
+
+        <!-- Modo de mezcla -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Modo de mezcla</h2>
+            <div class="relative h-28 m-3 bg-pink-400 rounded-lg overflow-hidden">
+                <div class="mix-blend-screen absolute inset-4 bg-blue-600 rounded-full"></div>
+            </div>
+            <p>Mezcla el elemento con lo que tiene debajo aclarando colores, como el modo pantalla de Photoshop.</p>
+        </section>
+
+        <!-- Modo de mezcla -->
+        <section class="bg-[#DCEBFA] rounded-xl border border-[#A9C7E8] p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Modo de mezcla</h2>
+            <div class="relative h-28 m-3 bg-pink-400 rounded-lg overflow-hidden">
+                <div class="mix-blend-darken absolute inset-4 bg-blue-600 rounded-full"></div>
+            </div>
+            <p>Mezcla conservando el valor más oscuro de cada canal entre el elemento y lo que tiene debajo.</p>
+        </section>
+
+        <!-- Ruta de recorte -->
+        <section class="bg-[#DCEBFA] border-b border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Ruta de recorte</h2>
+            <div class="h-28 m-3 bg-pink-300 [clip-path:polygon(0_0,100%_0,100%_75%,0_100%)]"></div>
+            <p>Recorta el elemento con un polígono de cuatro puntos, dejando un borde inferior en diagonal.</p>
+        </section>
+
+        <!-- Forma exterior -->
+        <section class="bg-[#DCEBFA] border-b border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Forma exterior</h2>
+            <div class="p-3 overflow-hidden">
+                <div class="float-left w-24 h-24 mr-2 rounded-full bg-pink-300 [shape-outside:circle(50%)]"></div>
+                <p>Hace que el texto fluya alrededor de un círculo en lugar de una caja rectangular. Solo funciona en elementos con float y con ancho y alto definidos.</p>
+            </div>
+        </section>
+
+        <!-- Aislamiento de capa -->
+        <section class="bg-[#DCEBFA] border-b border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Aislamiento de capa</h2>
+            <div class="isolate relative h-28 m-3 bg-blue-300 rounded-lg">
+                <div class="absolute top-2 left-2 w-20 h-20 bg-pink-300 z-10 rounded"></div>
+                <div class="absolute top-6 left-10 w-20 h-20 bg-yellow-300 z-0 rounded"></div>
+            </div>
+            <p>Crea un contexto de apilamiento propio para el elemento. Su z-index y el de sus hijos quedan contenidos dentro de él y no se mezclan con los de elementos externos.</p>
+        </section>
+
+        <!-- Ajuste de objeto -->
+        <section class="bg-[#DCEBFA] border-b border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Ajuste de objeto</h2>
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'><rect width='400' height='200' fill='%23f472b6'/><circle cx='200' cy='100' r='70' fill='%23fde047'/></svg>" alt="" class="object-contain w-full h-28 bg-blue-300">
+            <p class="mt-2">Escala la imagen o el video para que quepa completo dentro de su caja, conservando la proporción. Pueden quedar espacios vacíos a los lados o arriba y abajo.</p>
+        </section>
+
+        <!-- Posición de objeto -->
+        <section class="bg-[#DCEBFA] border-b border-black rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Posición de objeto</h2>
+            <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='400' height='200'><rect width='400' height='200' fill='%23f472b6'/><circle cx='200' cy='100' r='70' fill='%23fde047'/></svg>" alt="" class="object-cover object-center w-full h-28">
+            <p class="mt-2">Centra el contenido de una imagen o video dentro de su caja. Es útil junto con object-cover, cuando el medio es más grande que el contenedor y se recorta.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,367 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="shortcut icon" href="images/icon-removebg-preview.png" type="images/jpg">
+    <title>Flexbox y Grid</title>
+</head>
+
+<body class="bg-[#F6F0FF] text-[#62516F]">
+
+    
+    <nav class="bg-[#DCD0FF] p-4">
+        <ul class="flex flex-wrap justify-center gap-6 text-sm">
+           <li><a class="hover:text-blue-200" href="index.html">inicio</a></li>
+                <li><a class="hover:text-blue-200" href="colores.html">Colores,bordes y efectos</a></li>
+                <li><a class="hover:text-blue-200" href="espaciado.html">Espaciado y dimensiones</a></li>
+                <li><a class="hover:text-blue-200" href="flexbox.html">Flexbox y Grid</a></li>
+                <li><a class="hover:text-blue-200" href="posicion.html">Posicion e interaccion</a></li>
+                <li><a class="hover:text-blue-200" href="transformaciones.html">transiciones y animaciones</a></li>
+                <li><a class="hover:text-blue-200" href="tipografiaytexto.html">tipografia y texto</a></li>
+
+        </ul>
+    </nav>
+
+    <main class="max-w-7xl mx-auto p-6">
+
+        <div class="text-center mb-8">
+            <img src="images/momonga3.gif" alt="Momonga" class="  object-contain mx-auto">
+
+            <h1 class="text-4xl font-bold text-[#9879B8] mt-3">
+                Flexbox y Grid
+            </h1>
+
+            <p class="mt-2 text-[#82718F]">
+                Aprende a organizar, distribuir y alinear elementos utilizando Flexbox y Grid.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <!-- Contenedor flex -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Contenedor flex</h2>
+                <p class="p-3">Convierte el elemento en un contenedor flexible y permite organizar sus elementos hijos.</p>
+                <div class="flex bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Dirección flex -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Dirección de flex</h2>
+                <p class="p-3">Organiza los elementos en una columna vertical, uno debajo del otro.</p>
+                <div class="flex flex-col bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-1 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-1 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-1 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Envoltura flex -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Envoltura de flex</h2>
+                <p class="p-3">Permite que los elementos pasen a otra línea cuando no hay suficiente espacio.</p>
+                <div class="flex flex-wrap bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">5</div>
+                </div>
+            </section>
+
+            <!-- Justificar contenido -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Justificación de contenido</h2>
+                <p class="p-3">Distribuye los elementos dejando el mismo espacio entre ellos y los extremos del contenedor.</p>
+                <div class="flex justify-between bg-[#C6A9E5] p-2 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Centrar elementos -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Centrar elementos</h2>
+                <p class="p-3">Alinea los elementos en el centro del eje transversal del contenedor.</p>
+                <div class="flex items-center bg-[#C6A9E5] h-24 p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Alineación individual -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Alineación individual</h2>
+                <p class="p-3">Centra un elemento individual dentro del espacio disponible de su contenedor.</p>
+                <div class="flex bg-[#C6A9E5] h-24 p-2 rounded m-3">
+                    <div class="bg-[#F4C9E8] self-center p-2 rounded">Centro</div>
+                </div>
+            </section>
+
+            <!-- Orden -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Orden</h2>
+                <p class="p-3">Cambia el orden visual de un elemento dentro de un contenedor flexible o una cuadrícula.</p>
+                <div class="flex bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 order-3 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 order-1 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 order-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Alinear contenido -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Alinear contenido</h2>
+                <p class="p-3">Alinea las filas o columnas de elementos en el centro del contenedor cuando existe espacio disponible.</p>
+                <div class="flex flex-wrap content-center bg-[#C6A9E5] h-32 p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                </div>
+            </section>
+
+            <!-- Reducción flexible -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Reducción flexible</h2>
+                <p class="p-3">Evita que un elemento se reduzca cuando el contenedor no tiene suficiente espacio.</p>
+                <div class="flex bg-[#C6A9E5] p-2 gap-1 overflow-hidden rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 shrink-0 w-20 rounded">No reduce</div>
+                    <div class="bg-[#D5B8F0] p-2 w-20 rounded">Elemento</div>
+                </div>
+            </section>
+
+            <!-- Crecimiento flexible -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Crecimiento flexible</h2>
+                <p class="p-3">Permite que un elemento crezca y ocupe el espacio libre disponible en el contenedor.</p>
+                <div class="flex bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] grow p-2 rounded">Crece</div>
+                    <div class="bg-[#D5B8F0] p-2 rounded">Fijo</div>
+                </div>
+            </section>
+
+            <!-- Base flexible -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Base flexible</h2>
+                <p class="p-3">Establece el tamaño inicial de un elemento flexible antes de distribuir el espacio restante.</p>
+                <div class="flex bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] basis-1/4 p-2 rounded">1/4</div>
+                    <div class="bg-[#D5B8F0] p-2 rounded">Otro</div>
+                </div>
+            </section>
+
+            <!-- Contenedor grid -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Contenedor grid</h2>
+                <p class="p-3">Convierte el elemento en una cuadrícula para organizar sus elementos en filas y columnas.</p>
+                <div class="grid grid-cols-2 bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                </div>
+            </section>
+
+            <!-- Columnas de cuadrícula 2 -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Columnas de cuadrícula</h2>
+                <p class="p-3">Divide el contenedor en dos columnas del mismo tamaño.</p>
+                <div class="grid grid-cols-2 bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                </div>
+            </section>
+
+            <!-- Filas de cuadrícula -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Filas de cuadrícula</h2>
+                <p class="p-3">Divide la cuadrícula en tres filas para organizar los elementos verticalmente.</p>
+                <div class="grid grid-rows-3 grid-cols-2 bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">5</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">6</div>
+                </div>
+            </section>
+
+            <!-- Columnas automáticas -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Columnas automáticas</h2>
+                <p class="p-3">Permite que las columnas creadas automáticamente utilicen su tamaño según el contenido.</p>
+                <div class="grid grid-flow-col auto-cols-auto bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">Uno</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">Dos</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">Tres</div>
+                </div>
+            </section>
+
+            <!-- Filas automáticas -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Filas automáticas</h2>
+                <p class="p-3">Permite que las filas creadas automáticamente ajusten su tamaño según el contenido.</p>
+                <div class="grid grid-flow-row auto-rows-auto grid-cols-2 bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">Uno</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">Dos</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">Tres</div>
+                </div>
+            </section>
+
+            <!-- Justificación individual -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Justificación individual</h2>
+                <p class="p-3">Alinea un elemento individual horizontalmente en el centro de su espacio dentro de la cuadrícula.</p>
+                <div class="grid grid-cols-2 bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 justify-self-center rounded">Centro</div>
+                    <div class="bg-[#D5B8F0] p-2 rounded">Otro</div>
+                </div>
+            </section>
+
+            <!-- Flujo automático -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Flujo automático</h2>
+                <p class="p-3">Organiza automáticamente los elementos de la cuadrícula en columnas.</p>
+                <div class="grid grid-flow-col bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Columnas automáticas fr -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Columnas automáticas fr</h2>
+                <p class="p-3">Establece que las columnas automáticas ocupen una fracción igual del espacio disponible.</p>
+                <div class="grid grid-flow-col auto-cols-fr bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Filas automáticas fr -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Filas automáticas fr</h2>
+                <p class="p-3">Establece que las filas automáticas ocupen una fracción igual del espacio disponible.</p>
+                <div class="grid grid-flow-row auto-rows-fr grid-cols-2 bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Espacio entre elementos -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Espacio entre elementos</h2>
+                <p class="p-3">Agrega un espacio de cuatro unidades entre las filas y columnas de una cuadrícula o elementos flexibles.</p>
+                <div class="grid grid-cols-2 gap-4 bg-[#C6A9E5] p-2 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                </div>
+            </section>
+
+            <!-- Justificación de elementos -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Justificación de elementos</h2>
+                <p class="p-3">Centra horizontalmente los elementos dentro de sus respectivas celdas de la cuadrícula.</p>
+                <div class="grid grid-cols-2 justify-items-center bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                </div>
+            </section>
+
+            <!-- Alinear elementos -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Alinear elementos</h2>
+                <p class="p-3">Alinea los elementos al inicio de sus celdas en el eje vertical.</p>
+                <div class="grid grid-cols-2 items-start bg-[#C6A9E5] h-28 p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                </div>
+            </section>
+
+            <!-- Tres columnas -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Tres columnas</h2>
+                <p class="p-3">Divide el contenedor en tres columnas del mismo tamaño.</p>
+                <div class="grid grid-cols-3 bg-[#C6A9E5] p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                </div>
+            </section>
+
+            <!-- Espacio entre columnas -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Espacio entre columnas</h2>
+                <p class="p-3">Agrega una separación horizontal de cuatro unidades entre las columnas.</p>
+                <div class="grid grid-cols-2 gap-x-4 bg-[#C6A9E5] p-2 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                </div>
+            </section>
+
+            <!-- Espacio entre filas -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Espacio entre filas</h2>
+                <p class="p-3">Agrega una separación vertical de cuatro unidades entre las filas.</p>
+                <div class="grid grid-cols-2 gap-y-4 bg-[#C6A9E5] p-2 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">3</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">4</div>
+                </div>
+            </section>
+
+            <!-- Ubicación de contenido -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Ubicación de contenido</h2>
+                <p class="p-3">Centra el conjunto de elementos de la cuadrícula dentro del espacio disponible del contenedor.</p>
+                <div class="grid grid-cols-2 place-content-center bg-[#C6A9E5] h-32 p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                </div>
+            </section>
+
+            <!-- Ubicación de elementos -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Ubicación de elementos</h2>
+                <p class="p-3">Centra los elementos horizontal y verticalmente dentro de sus celdas.</p>
+                <div class="grid grid-cols-2 place-items-center bg-[#C6A9E5] h-28 p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 rounded">1</div>
+                    <div class="bg-[#F4C9E8] p-2 rounded">2</div>
+                </div>
+            </section>
+
+            <!-- Ubicación individual -->
+            <section class="bg-[#EDE2FA] border border-[#D5C1EC] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#DCC8F1] p-3 font-bold">Ubicación individual</h2>
+                <p class="p-3">Centra un elemento individual en ambos ejes dentro de su celda de la cuadrícula.</p>
+                <div class="grid grid-cols-2 bg-[#C6A9E5] h-28 p-2 gap-1 rounded m-3">
+                    <div class="bg-[#F4C9E8] p-2 place-self-center rounded">Centro</div>
+                    <div class="bg-[#D5B8F0] p-2 rounded">Otro</div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>

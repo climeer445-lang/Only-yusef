@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="shortcut icon" href="images/icon-removebg-preview.png" type="images/jpg">
+    <title>Posición e interacción</title>
+</head>
+
+<body class="bg-[#FFF7ED] text-[#725746]">
+
+    <header>
+        <nav class="bg-[#FFEFD5] p-4">
+            <ul class="flex flex-wrap justify-center gap-6 text-sm">
+                <li><a class="hover:text-[#A66F4F]" href="index.html">inicio</a></li>
+                <li><a class="hover:text-[#A66F4F]" href="colores.html">Colores,bordes y efectos</a></li>
+                <li><a class="hover:text-[#A66F4F]" href="espaciado.html">Espaciado y dimensiones</a></li>
+                <li><a class="hover:text-[#A66F4F]" href="flexbox.html">Flexbox y Grid</a></li>
+                <li><a class="hover:text-[#A66F4F]" href="posicion.html">Posición e interacción</a></li>
+                <li><a class="hover:text-[#A66F4F]" href="transformaciones.html">Transiciones y animaciones</a></li>
+                <li><a class="hover:text-[#A66F4F]" href="tipografiaytexto.html">Tipografía y texto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="max-w-7xl mx-auto p-6">
+
+        
+        <div class="text-center mb-8">
+
+            
+            <img src="images/eee.gif" alt="Kurimanju de Chiikawa"
+                class="object-contain mx-auto max-h-72">
+
+            <h1 class="text-4xl font-bold text-[#A66F4F] mt-3">
+                Posición e interacción
+            </h1>
+
+            <p class="mt-2 text-[#967762]">
+             posición de los elementos y sus interacciones utilizando Tailwind CSS.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <!-- POSICIÓN -->
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Posición static</h2>
+                <p class="p-3">Posición por defecto. Ignora top, right, bottom, left y z-index.</p>
+                <p class="static bg-[#D9B99B] p-2 m-3 rounded">Posición estática</p>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Posición relative</h2>
+                <p class="p-3">Se desplaza desde su lugar original sin afectar a los demás.</p>
+                <p class="relative top-4 left-4 bg-[#D9B99B] p-2 m-3 rounded">Posición relativa</p>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Posición absolute</h2>
+                <p class="p-3">Ubica un elemento respecto a su contenedor posicionado.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute top-2 left-2 bg-[#A66F4F] text-white p-2 rounded">Absoluto dentro de un padre relative</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Posición sticky</h2>
+                <p class="p-3">El elemento permanece pegado al llegar a una posición durante el desplazamiento.</p>
+                <div class="h-40 overflow-auto bg-[#D9B99B] m-3 rounded">
+                    <p class="sticky top-0 bg-[#A66F4F] text-white p-2">Me quedo pegado arriba al hacer scroll</p>
+                    <div class="h-64 p-2">Contenido largo</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Arriba</h2>
+                <p class="p-3">Coloca un elemento en la parte superior de su contenedor.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute top-0 bg-[#A66F4F] text-white p-2 rounded">top-0</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Derecha</h2>
+                <p class="p-3">Coloca un elemento en el extremo derecho de su contenedor.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute right-0 bg-[#A66F4F] text-white p-2 rounded">right-0</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Abajo</h2>
+                <p class="p-3">Coloca un elemento en la parte inferior de su contenedor.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute bottom-0 bg-[#A66F4F] text-white p-2 rounded">bottom-0</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Izquierda</h2>
+                <p class="p-3">Coloca un elemento en el extremo izquierdo de su contenedor.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute left-0 bg-[#A66F4F] text-white p-2 rounded">left-0</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Los 4 lados (inset)</h2>
+                <p class="p-3">Permite ocupar todo el espacio del contenedor posicionado.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute inset-0 bg-[#A66F4F]/80 text-white p-2 rounded">inset-0 cubre todo el padre</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Eje horizontal (inset-x)</h2>
+                <p class="p-3">Ocupa todo el ancho del contenedor.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute inset-x-0 top-0 bg-[#A66F4F] text-white p-2">inset-x-0 ocupa todo el ancho</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Eje vertical (inset-y)</h2>
+                <p class="p-3">Ocupa toda la altura del contenedor.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute inset-y-0 left-0 w-24 bg-[#A66F4F] text-white p-2">inset-y-0 ocupa todo el alto</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Eje horizontal automático</h2>
+                <p class="p-3">Establece automáticamente la posición horizontal.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute inset-x-auto top-0 w-32 bg-[#A66F4F] text-white p-2">inset-x-auto</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Eje vertical automático</h2>
+                <p class="p-3">Establece automáticamente la posición vertical.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <p class="absolute inset-y-auto left-0 w-32 bg-[#A66F4F] text-white p-2">inset-y-auto</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Índice z</h2>
+                <p class="p-3">Controla qué elemento aparece delante de otro.</p>
+                <div class="relative h-40 bg-[#D9B99B] m-3 rounded">
+                    <div class="absolute top-2 left-2 z-10 size-20 bg-[#A66F4F] text-white p-1 rounded">z-10</div>
+                    <div class="absolute top-8 left-8 z-0 size-20 bg-[#E8A9A0] p-1 rounded">z-0</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Flotante</h2>
+                <p class="p-3">Permite que el texto rodee un elemento flotante.</p>
+                <div class="float-left m-3 size-16 bg-[#A66F4F] rounded"></div>
+                <p class="bg-[#D9B99B] p-2 m-3 rounded">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum.</p>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Limpiar flotantes</h2>
+                <p class="p-3">Evita que un elemento se ubique junto a un elemento flotante.</p>
+                <div class="float-left m-3 size-16 bg-[#A66F4F] rounded"></div>
+                <p class="clear-left bg-[#D9B99B] p-2 m-3 rounded">Este párrafo usa clear-left y baja debajo del elemento flotante.</p>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Mostrar/ocultar</h2>
+                <p class="p-3">El elemento oculto no ocupa espacio en el documento.</p>
+                <p class="hidden">Este texto está oculto y no ocupa espacio</p>
+                <p class="bg-[#D9B99B] p-2 m-3 rounded">El párrafo oculto no ocupa lugar (display: none).</p>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Visibilidad</h2>
+                <p class="p-3">Permite ocultar un elemento sin eliminar el espacio que ocupa.</p>
+                <p class="invisible bg-[#D9B99B] p-2 m-3">Invisible: no se ve pero ocupa espacio</p>
+                <p class="visible bg-[#D9B99B] p-2 m-3 rounded">Visible</p>
+            </section>
+
+            <!-- DESBORDAMIENTO -->
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Desbordamiento</h2>
+                <p class="p-3">Oculta el contenido que sobrepasa los límites del contenedor.</p>
+                <div class="h-24 overflow-hidden bg-[#D9B99B] p-2 m-3 rounded">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Desbordamiento horizontal</h2>
+                <p class="p-3">Controla el contenido que se desborda horizontalmente.</p>
+                <div class="overflow-x-hidden bg-[#D9B99B] p-2 m-3 rounded">
+                    <p class="whitespace-nowrap">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum.</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Desbordamiento vertical</h2>
+                <p class="p-3">Controla el contenido que se desborda verticalmente.</p>
+                <div class="h-24 overflow-y-hidden bg-[#D9B99B] p-2 m-3 rounded">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Desplazamiento excesivo</h2>
+                <p class="p-3">Permite que el desplazamiento continúe hacia la página al llegar al límite.</p>
+                <div class="h-24 overflow-auto overscroll-auto bg-[#D9B99B] p-2 m-3 rounded">
+                    <div class="h-64">overscroll-auto: al llegar al final, el scroll pasa a la página.</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Desplazamiento excesivo horizontal</h2>
+                <p class="p-3">Controla el desplazamiento excesivo en el eje horizontal.</p>
+                <div class="h-24 overflow-auto overscroll-x-auto bg-[#D9B99B] p-2 m-3 rounded">
+                    <div class="w-96 h-32">overscroll-x-auto: desplázame horizontalmente.</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Desplazamiento excesivo vertical</h2>
+                <p class="p-3">Controla el desplazamiento excesivo en el eje vertical.</p>
+                <div class="h-24 overflow-auto overscroll-y-auto bg-[#D9B99B] p-2 m-3 rounded">
+                    <div class="h-64">overscroll-y-auto: desplázame verticalmente.</div>
+                </div>
+            </section>
+
+            <!-- SCROLL -->
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Comportamiento de scroll</h2>
+                <p class="p-3">Activa un desplazamiento suave al navegar dentro del contenedor.</p>
+                <div class="h-24 overflow-y-auto scroll-smooth bg-[#D9B99B] p-2 m-3 rounded">
+                    <a class="underline" href="#destino">Ir al final (scroll suave)</a>
+                    <div class="h-48"></div>
+                    <p id="destino" class="bg-[#A66F4F] text-white p-2 rounded">Destino</p>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Tipo de snap</h2>
+                <p class="p-3">Permite ajustar el desplazamiento a posiciones específicas.</p>
+                <div class="flex overflow-x-auto snap-x snap-mandatory bg-[#D9B99B] m-3 rounded">
+                    <div class="w-32 shrink-0 snap-center bg-[#EBCDB5] text-center p-3">1</div>
+                    <div class="w-32 shrink-0 snap-center bg-[#E8A9A0] text-center p-3">2</div>
+                    <div class="w-32 shrink-0 snap-center bg-[#A66F4F] text-white text-center p-3">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Alineación del snap</h2>
+                <p class="p-3">Alinea cada elemento al inicio del área de desplazamiento.</p>
+                <div class="h-24 overflow-y-auto snap-y snap-mandatory bg-[#D9B99B] m-3 rounded">
+                    <div class="h-24 snap-start bg-[#EBCDB5] text-center p-3">1 (snap-start)</div>
+                    <div class="h-24 snap-start bg-[#E8A9A0] text-center p-3">2 (snap-start)</div>
+                    <div class="h-24 snap-start bg-[#A66F4F] text-white text-center p-3">3 (snap-start)</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Relleno de scroll</h2>
+                <p class="p-3">Agrega espacio interno alrededor del área de desplazamiento.</p>
+                <div class="h-24 overflow-y-auto snap-y snap-mandatory scroll-p-4 bg-[#D9B99B] m-3 rounded">
+                    <div class="h-20 snap-start bg-[#EBCDB5] text-center">1</div>
+                    <div class="h-20 snap-start bg-[#E8A9A0] text-center">2</div>
+                    <div class="h-20 snap-start bg-[#A66F4F] text-white text-center">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Relleno de scroll superior</h2>
+                <p class="p-3">Agrega espacio interno en la parte superior del desplazamiento.</p>
+                <div class="h-24 overflow-y-auto snap-y snap-mandatory scroll-pt-4 bg-[#D9B99B] m-3 rounded">
+                    <div class="h-20 snap-start bg-[#EBCDB5] text-center">1</div>
+                    <div class="h-20 snap-start bg-[#E8A9A0] text-center">2</div>
+                    <div class="h-20 snap-start bg-[#A66F4F] text-white text-center">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Relleno de scroll derecho</h2>
+                <p class="p-3">Agrega espacio interno en el lado derecho del desplazamiento.</p>
+                <div class="flex overflow-x-auto snap-x snap-mandatory scroll-pr-4 bg-[#D9B99B] m-3 rounded">
+                    <div class="w-32 shrink-0 snap-end bg-[#EBCDB5] text-center p-3">1</div>
+                    <div class="w-32 shrink-0 snap-end bg-[#E8A9A0] text-center p-3">2</div>
+                    <div class="w-32 shrink-0 snap-end bg-[#A66F4F] text-white text-center p-3">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Relleno de scroll inferior</h2>
+                <p class="p-3">Agrega espacio interno en la parte inferior del desplazamiento.</p>
+                <div class="h-24 overflow-y-auto snap-y snap-mandatory scroll-pb-4 bg-[#D9B99B] m-3 rounded">
+                    <div class="h-20 snap-end bg-[#EBCDB5] text-center">1</div>
+                    <div class="h-20 snap-end bg-[#E8A9A0] text-center">2</div>
+                    <div class="h-20 snap-end bg-[#A66F4F] text-white text-center">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Relleno de scroll izquierdo</h2>
+                <p class="p-3">Agrega espacio interno en el lado izquierdo del desplazamiento.</p>
+                <div class="flex overflow-x-auto snap-x snap-mandatory scroll-pl-4 bg-[#D9B99B] m-3 rounded">
+                    <div class="w-32 shrink-0 snap-start bg-[#EBCDB5] text-center p-3">1</div>
+                    <div class="w-32 shrink-0 snap-start bg-[#E8A9A0] text-center p-3">2</div>
+                    <div class="w-32 shrink-0 snap-start bg-[#A66F4F] text-white text-center p-3">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Margen de scroll</h2>
+                <p class="p-3">Agrega un margen alrededor de los elementos durante el ajuste del desplazamiento.</p>
+                <div class="h-24 overflow-y-auto snap-y snap-mandatory bg-[#D9B99B] m-3 rounded">
+                    <div class="h-20 snap-start scroll-m-4 bg-[#EBCDB5] text-center">1</div>
+                    <div class="h-20 snap-start scroll-m-4 bg-[#E8A9A0] text-center">2</div>
+                    <div class="h-20 snap-start scroll-m-4 bg-[#A66F4F] text-white text-center">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Margen de scroll superior</h2>
+                <p class="p-3">Agrega un margen en la parte superior del elemento durante el ajuste.</p>
+                <div class="h-24 overflow-y-auto snap-y snap-mandatory bg-[#D9B99B] m-3 rounded">
+                    <div class="h-20 snap-start scroll-mt-4 bg-[#EBCDB5] text-center">1</div>
+                    <div class="h-20 snap-start scroll-mt-4 bg-[#E8A9A0] text-center">2</div>
+                    <div class="h-20 snap-start scroll-mt-4 bg-[#A66F4F] text-white text-center">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Margen de scroll derecho</h2>
+                <p class="p-3">Agrega un margen en el lado derecho del elemento durante el ajuste.</p>
+                <div class="flex overflow-x-auto snap-x snap-mandatory bg-[#D9B99B] m-3 rounded">
+                    <div class="w-32 shrink-0 snap-end scroll-mr-4 bg-[#EBCDB5] text-center p-3">1</div>
+                    <div class="w-32 shrink-0 snap-end scroll-mr-4 bg-[#E8A9A0] text-center p-3">2</div>
+                    <div class="w-32 shrink-0 snap-end scroll-mr-4 bg-[#A66F4F] text-white text-center p-3">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Margen de scroll inferior</h2>
+                <p class="p-3">Agrega un margen en la parte inferior del elemento durante el ajuste.</p>
+                <div class="h-24 overflow-y-auto snap-y snap-mandatory bg-[#D9B99B] m-3 rounded">
+                    <div class="h-20 snap-end scroll-mb-4 bg-[#EBCDB5] text-center">1</div>
+                    <div class="h-20 snap-end scroll-mb-4 bg-[#E8A9A0] text-center">2</div>
+                    <div class="h-20 snap-end scroll-mb-4 bg-[#A66F4F] text-white text-center">3</div>
+                </div>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Margen de scroll izquierdo</h2>
+                <p class="p-3">Agrega un margen en el lado izquierdo del elemento durante el ajuste.</p>
+                <div class="flex overflow-x-auto snap-x snap-mandatory bg-[#D9B99B] m-3 rounded">
+                    <div class="w-32 shrink-0 snap-start scroll-ml-4 bg-[#EBCDB5] text-center p-3">1</div>
+                    <div class="w-32 shrink-0 snap-start scroll-ml-4 bg-[#E8A9A0] text-center p-3">2</div>
+                    <div class="w-32 shrink-0 snap-start scroll-ml-4 bg-[#A66F4F] text-white text-center p-3">3</div>
+                </div>
+            </section>
+
+            <!-- INTERACCIÓN -->
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Eventos del puntero</h2>
+                <p class="p-3">Desactiva los eventos del puntero sobre un elemento.</p>
+                <button class="pointer-events-none m-3 bg-[#D9B99B] px-3 py-2 rounded">No puedes hacer clic</button>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Cambiar tamaño</h2>
+                <p class="p-3">Controla si un usuario puede cambiar el tamaño de un elemento.</p>
+                <textarea class="resize-none m-3 bg-[#D9B99B] p-2 rounded" placeholder="No se puede redimensionar"></textarea>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Cursor</h2>
+                <p class="p-3">Cambia la apariencia del cursor al pasar sobre un elemento.</p>
+                <p class="cursor-pointer bg-[#D9B99B] p-3 m-3 rounded">Pasa el mouse por aquí para ver la mano.</p>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Selección del usuario</h2>
+                <p class="p-3">Evita que el usuario pueda seleccionar el texto.</p>
+                <p class="select-none bg-[#D9B99B] p-3 m-3 rounded">Este texto no se puede seleccionar.</p>
+            </section>
+
+            <section class="bg-[#F5E5D5] border border-[#E5C7AD] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#EBCDB5] p-3 font-bold">Acción táctil</h2>
+                <p class="p-3">Desactiva los gestos táctiles sobre un elemento.</p>
+                <p class="touch-none bg-[#D9B99B] p-3 m-3 rounded">touch-none desactiva gestos táctiles (scroll, zoom) sobre este elemento en pantallas táctiles.</p>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>
+

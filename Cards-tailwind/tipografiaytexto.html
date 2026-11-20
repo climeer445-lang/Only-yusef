@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="shortcut icon" href="images/icon-removebg-preview.png" type="images/jpg">
+    <title>Flexbox y Grid</title>
+</head>
+
+<body class="bg-[#FCEDF2] text-[#62516F]">
+    <nav class="bg-[#F5DFE7] p-4">
+        <ul class="flex flex-wrap justify-center gap-6 text-sm">
+           <li><a class="hover:text-blue-200" href="index.html">inicio</a></li>
+                <li><a class="hover:text-blue-200" href="colores.html">Colores,bordes y efectos</a></li>
+                <li><a class="hover:text-blue-200" href="espaciado.html">Espaciado y dimensiones</a></li>
+                <li><a class="hover:text-blue-200" href="flexbox.html">Flexbox y Grid</a></li>
+                <li><a class="hover:text-blue-200" href="posicion.html">Posicion e interaccion</a></li>
+                <li><a class="hover:text-blue-200" href="transformaciones.html">transiciones y animaciones</a></li>
+                <li><a class="hover:text-blue-200" href="tipografiaytexto.html">tipografia y texto</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="text-center mt-8 mb-8">
+        <img src="images/text.gif" alt="Chiikawa"
+             class=" object-contain mx-auto mb-3">
+
+        <h1 class="text-3xl font-bold text-[#D77FA5]">
+            Tipografía y texto
+        </h1>
+
+        <p class="mt-2">
+            Ejemplos de clases y utilidades de Tailwind CSS v4.
+        </p>
+    </div>
+
+    <main class="m-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Color del texto</h2>
+            <p class="text-pink-500 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Sombra de texto</h2>
+            <p class="text-shadow-lg mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Alineación de texto</h2>
+            <p class="text-right mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Alinear última línea</h2>
+            <p class="[text-align-last:right] mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Método de justificado</h2>
+            <p class="text-justify [text-justify:inter-word] mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Decoración de texto</h2>
+            <p class="underline mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Color de la decoración</h2>
+            <p class="underline decoration-green-400 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Estilo de decoración</h2>
+            <p class="underline decoration-dotted mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Grosor de decoración</h2>
+            <p class="underline decoration-2 mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Transformación de texto</h2>
+            <p class="uppercase mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Desbordamiento del texto</h2>
+            <p class="truncate mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Familia de fuentes (mono)</h2>
+            <p class="font-mono mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Tamaño de fuente</h2>
+            <p class="text-xs mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Grosor de fuente</h2>
+            <p class="font-semibold mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Estilo de fuente</h2>
+            <p class="italic mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Espacio entre letras</h2>
+            <p class="tracking-widest mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Espacio entre palabras</h2>
+            <p class="[word-spacing:0.4em] mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Altura de línea</h2>
+            <p class="leading-loose mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Salto de línea</h2>
+            <p class="[line-break:anywhere] mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Salto de palabra</h2>
+            <p class="break-all mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">División de palabras largas</h2>
+            <p class="wrap-break-word mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Separación de sílabas</h2>
+            <p class="hyphens-auto mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Alineación vertical</h2>
+            <p class="align-baseline mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+        <section class="bg-[#FADCE8] border border-[#EBAFC7] rounded-xl p-3">
+            <h2 class="bg-white p-2 rounded-lg font-bold">Espacio en blanco</h2>
+            <p class="whitespace-nowrap mt-2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam excepturi eaque quidem similique doloribus impedit, qui iusto est rerum, minima nihil repudiandae velit? Eos, similique reiciendis quod dolorum facilis asperiores.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

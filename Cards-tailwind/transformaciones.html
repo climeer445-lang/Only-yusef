@@ -1,0 +1,794 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="shortcut icon" href="images/icon-removebg-preview.png" type="images/jpg">
+
+    <style type="text/tailwindcss">
+        @theme {
+            --animate-wiggle: wiggle 1s ease-in-out infinite;
+            --animate-scale-y: scale-y 1s ease-in-out infinite;
+            --animate-zoom-in: zoom-in 1.5s ease-out infinite;
+            --animate-slide-up: slide-up 1.5s ease-out infinite;
+            --animate-fade-in: fade-in 1.5s ease-out infinite;
+            --animate-rotate-45: rotate-in 1.5s ease-in-out infinite;
+            --animate-slide-fade-up: slide-fade-up 1.5s ease-out infinite;
+            --animate-bounce-scale-down: bounce-scale-down 1.5s ease-in-out infinite;
+            --animate-flip-x: flip-x 2s ease-in-out infinite;
+            --animate-wiggle-slow: wiggle 3s ease-in-out infinite;
+            --animate-blink-slow: blink 3s ease-in-out infinite;
+            --animate-slide-bounce-up: slide-bounce-up 3s ease-out infinite;
+            --animate-heartbeat-slow: heartbeat 3s ease-in-out infinite;
+            --animate-rubberband-slow: rubberband 3s ease-in-out infinite;
+            --animate-head-shake-slow: head-shake 3s ease-in-out infinite;
+            --animate-jello-slow: jello 3s ease-in-out infinite;
+            --animate-tada-slow: tada 3s ease-in-out infinite;
+            --animate-bounce-in-left-slow: bounce-in-left 3s ease-out infinite;
+            --animate-bounce-in-right-slow: bounce-in-right 3s ease-out infinite;
+            --animate-bounce-in-up-slow: bounce-in-up 3s ease-out infinite;
+            --animate-bounce-in-down-slow: bounce-in-down 3s ease-out infinite;
+            --animate-fade-in-left-slow: fade-in-left 3s ease-out infinite;
+            --animate-fade-in-right-slow: fade-in-right 3s ease-out infinite;
+            --animate-fade-in-up-slow: fade-in-up 3s ease-out infinite;
+            --animate-fade-in-down-slow: fade-in-down 3s ease-out infinite;
+            --animate-slide-in-left-slow: slide-in-left 3s ease-out infinite;
+            --animate-slide-in-right-slow: slide-in-right 3s ease-out infinite;
+            --animate-slide-in-up-slow: slide-in-up 3s ease-out infinite;
+            --animate-slide-in-down-slow: slide-in-down 3s ease-out infinite;
+        }
+
+        @keyframes wiggle { 0%, 100% { rotate: -6deg; } 50% { rotate: 6deg; } }
+        @keyframes scale-y { 0%, 100% { scale: 1 1; } 50% { scale: 1 1.6; } }
+        @keyframes zoom-in { from { scale: 0.3; opacity: 0; } to { scale: 1; opacity: 1; } }
+        @keyframes slide-up { from { translate: 0 30px; } to { translate: 0 0; } }
+        @keyframes fade-in { from { opacity: 0; } to { opacity: 1; } }
+        @keyframes rotate-in { from { rotate: 0deg; } to { rotate: 45deg; } }
+        @keyframes slide-fade-up { from { translate: 0 30px; opacity: 0; } to { translate: 0 0; opacity: 1; } }
+        @keyframes bounce-scale-down { 0%, 100% { translate: 0 0; scale: 1; } 50% { translate: 0 -20px; scale: 0.6; } }
+        @keyframes flip-x { from { rotate: x 0deg; } to { rotate: x 360deg; } }
+        @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+        @keyframes slide-bounce-up { 0% { translate: 0 40px; } 60% { translate: 0 -10px; } 80% { translate: 0 4px; } 100% { translate: 0 0; } }
+        @keyframes heartbeat { 0%, 100% { scale: 1; } 25% { scale: 1.3; } 50% { scale: 1; } 75% { scale: 1.2; } }
+        @keyframes rubberband { 0%, 100% { scale: 1 1; } 30% { scale: 1.25 0.75; } 50% { scale: 0.8 1.2; } 70% { scale: 1.1 0.9; } }
+        @keyframes head-shake { 0%, 50%, 100% { translate: 0; } 10%, 30% { translate: -8px; } 20%, 40% { translate: 8px; } }
+        @keyframes jello { 0%, 100% { transform: none; } 30% { transform: skewX(-12deg) skewY(-12deg); } 50% { transform: skewX(6deg) skewY(6deg); } 70% { transform: skewX(-3deg) skewY(-3deg); } }
+        @keyframes tada { 0%, 100% { scale: 1; rotate: 0deg; } 10%, 20% { scale: 0.9; rotate: -3deg; } 30%, 50%, 70% { scale: 1.1; rotate: 3deg; } 40%, 60% { scale: 1.1; rotate: -3deg; } }
+        @keyframes bounce-in-left { 0% { translate: -60px 0; opacity: 0; } 60% { translate: 10px 0; opacity: 1; } 100% { translate: 0 0; } }
+        @keyframes bounce-in-right { 0% { translate: 60px 0; opacity: 0; } 60% { translate: -10px 0; opacity: 1; } 100% { translate: 0 0; } }
+        @keyframes bounce-in-up { 0% { translate: 0 60px; opacity: 0; } 60% { translate: 0 -10px; opacity: 1; } 100% { translate: 0 0; } }
+        @keyframes bounce-in-down { 0% { translate: 0 -60px; opacity: 0; } 60% { translate: 0 10px; opacity: 1; } 100% { translate: 0 0; } }
+        @keyframes fade-in-left { from { translate: -30px 0; opacity: 0; } to { translate: 0 0; opacity: 1; } }
+        @keyframes fade-in-right { from { translate: 30px 0; opacity: 0; } to { translate: 0 0; opacity: 1; } }
+        @keyframes fade-in-up { from { translate: 0 30px; opacity: 0; } to { translate: 0 0; opacity: 1; } }
+        @keyframes fade-in-down { from { translate: 0 -30px; opacity: 0; } to { translate: 0 0; opacity: 1; } }
+        @keyframes slide-in-left { from { translate: -100px 0; } to { translate: 0 0; } }
+        @keyframes slide-in-right { from { translate: 100px 0; } to { translate: 0 0; } }
+        @keyframes slide-in-up { from { translate: 0 60px; } to { translate: 0 0; } }
+        @keyframes slide-in-down { from { translate: 0 -60px; } to { translate: 0 0; } }
+        @keyframes slide-x { from { translate: -30px 0; } to { translate: 30px 0; } }
+    </style>
+
+    <style>
+        body {
+            background-color: #FFF0E8;
+            color: #765447;
+        }
+
+        /* MENÚ COMPARTIDO CON LOS DEMÁS PERSONAJES */
+        nav {
+    background-color: #ffe3ca !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+nav a {
+    color: #765447 !important;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #B87552 !important;
+}
+
+        main {
+            max-width: 1400px;
+            margin: auto;
+            padding: 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        main section {
+            background-color: #F6DCCF !important;
+            border: 1px solid #EBC5B2 !important;
+            border-radius: 15px;
+            padding: 12px;
+            box-shadow: 0 3px 8px #D9B6A655;
+        }
+
+        main section h2 {
+            background-color: #F3C9B5 !important;
+            color: #765447 !important;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        main section p {
+            color: #765447 !important;
+            font-size: 14px;
+            padding: 5px;
+        }
+
+        main section .bg-pink-400 {
+            background-color: #EFAF9B !important;
+        }
+
+        main section .bg-pink-500 {
+            background-color: #D98F7D !important;
+        }
+
+        main section .bg-yellow-400 {
+            background-color: #F5D58B !important;
+        }
+
+        main section .bg-pink-400,
+        main section .bg-pink-500,
+        main section .bg-yellow-400 {
+            border-radius: 8px;
+        }
+
+        .encabezado {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 20px;
+        }
+        .encabezado h1 {
+            font-size: 32px;
+            font-weight: bold;
+            color: #B87552;
+        }
+    </style>
+
+    <title>Transformaciones, transiciones y animaciones</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="h-auto min-h-[70px] flex items-center justify-center p-4">
+            <ul class="flex text-white">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="colores.html">Colores, bordes y efectos</a></li>
+                <li><a href="espaciado.html">Espaciado y dimensiones</a></li>
+                <li><a href="flexbox.html">Flexbox y Grid</a></li>
+                <li><a href="posicion.html">Posición e interacción</a></li>
+                <li><a href="transformaciones.html">Transformaciones y animaciones</a></li>
+                <li><a href="tipografiaytexto.html">Tipografía y texto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <div class="encabezado">
+        <img src="images/3.gif"
+        alt="Shisa"
+        class="w-[700px] h-[300px] object-contain mx-auto">
+            <h1>Transformaciones, transiciones y animaciones</h1>
+          
+        </div>
+
+        <!-- Acción táctil -->
+        <section>
+            <h2>Acción táctil</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="touch-none select-none w-32 h-16 bg-pink-400 rounded flex items-center justify-center text-sm">Desliza aquí</div>
+            </div>
+            <p>Desactiva los gestos táctiles del navegador, como scroll y zoom, para gestionarlos por código.</p>
+        </section>
+
+        <!-- Transformaciones -->
+        <section>
+            <h2>Transformaciones</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded rotate-45"></div>
+            </div>
+            <p>Gira el elemento cuarenta y cinco grados; en v4 ya no hace falta añadir transform.</p>
+        </section>
+
+        <!-- Escalado -->
+        <section>
+            <h2>Escalado</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded scale-150"></div>
+            </div>
+            <p>Escala el elemento al ciento cincuenta por ciento de su tamaño sin alterar el espacio que ocupa.</p>
+        </section>
+
+        <!-- Rotación -->
+        <section>
+            <h2>Rotación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded rotate-90">↑</div>
+            </div>
+            <p>Gira el elemento noventa grados en sentido horario, útil para flechas, iconos y textos verticales.</p>
+        </section>
+
+        <!-- Sesgado -->
+        <section>
+            <h2>Sesgado</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded skew-x-6"></div>
+            </div>
+            <p>Inclina el elemento seis grados en el eje horizontal, deformándolo en paralelogramo.</p>
+        </section>
+
+        <!-- Traslación -->
+        <section>
+            <h2>Traslación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded -translate-x-4"></div>
+            </div>
+            <p>Desplaza el elemento 1rem a la izquierda sin modificar el flujo del documento.</p>
+        </section>
+
+        <!-- Origen de la transformación -->
+        <section>
+            <h2>Origen de la transformación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded origin-center rotate-45"></div>
+            </div>
+            <p>Fija el centro del elemento como punto de transformación, que es el comportamiento por defecto.</p>
+        </section>
+
+        <!-- Origen de transformación X -->
+        <section>
+            <h2>Origen de transformación X</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded origin-left rotate-45"></div>
+            </div>
+            <p>Fija el borde izquierdo como punto fijo de rotaciones y escalados.</p>
+        </section>
+
+        <!-- Origen de transformación Y -->
+        <section>
+            <h2>Origen de transformación Y</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded origin-top rotate-45"></div>
+            </div>
+            <p>Fija el borde superior como punto fijo de rotaciones y escalados.</p>
+        </section>
+
+        <!-- Origen de transformación Z -->
+        <section>
+            <h2>Origen de transformación Z</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded origin-bottom rotate-45"></div>
+            </div>
+            <p>Fija el borde inferior como punto fijo de rotaciones y escalados.</p>
+        </section>
+
+        <!-- Estilo de transformación -->
+        <section>
+            <h2>Estilo de transformación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="perspective-[500px]">
+                    <div class="transform-3d rotate-y-45 w-20 h-20">
+                        <div class="absolute inset-0 bg-pink-400 rounded"></div>
+                        <div class="absolute inset-0 bg-yellow-400 rounded translate-z-8 opacity-80"></div>
+                    </div>
+                </div>
+            </div>
+            <p>Permite que los hijos conserven su posición en el espacio tridimensional, necesario para volteos con profundidad.</p>
+        </section>
+
+        <!-- Caja de transformación -->
+        <section>
+            <h2>Caja de transformación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded [transform-box:border-box] rotate-45"></div>
+            </div>
+            <p>Define la caja de borde como referencia para calcular las transformaciones.</p>
+        </section>
+
+        <!-- Perspectiva -->
+        <section>
+            <h2>Perspectiva</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="perspective-[500px]">
+                    <div class="w-16 h-16 bg-pink-400 rounded rotate-x-45 rotate-y-30"></div>
+                </div>
+            </div>
+            <p>Establece una perspectiva de 500px para los hijos 3D; menor valor significa más profundidad.</p>
+        </section>
+
+        <!-- Origen de perspectiva -->
+        <section>
+            <h2>Origen de perspectiva</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="perspective-[500px] perspective-origin-bottom">
+                    <div class="w-16 h-16 bg-pink-400 rounded rotate-x-45"></div>
+                </div>
+            </div>
+            <p>Sitúa el punto de vista de la perspectiva en la parte inferior del elemento.</p>
+        </section>
+
+        <!-- Visibilidad de cara trasera -->
+        <section>
+            <h2>Visibilidad de cara trasera</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="perspective-[500px]">
+                    <div class="w-16 h-16 bg-pink-400 rounded backface-hidden transition duration-500 hover:rotate-y-180 flex items-center justify-center text-xs">Pasa el mouse</div>
+                </div>
+            </div>
+            <p>Oculta la cara trasera al girar, imprescindible en tarjetas volteables con frente y reverso.</p>
+        </section>
+
+        <!-- Cambio futuro -->
+        <section>
+            <h2>Cambio futuro</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded will-change-transform transition hover:scale-125"></div>
+            </div>
+            <p>Avisa al navegador de que la transformación va a cambiar, permitiéndole optimizar el renderizado.</p>
+        </section>
+
+        <!-- Transiciones -->
+        <section>
+            <h2>Transiciones</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded transition hover:bg-yellow-400 hover:scale-125"></div>
+            </div>
+            <p>Habilita una transición suave en propiedades comunes cuando cambian por hover, foco u otro estado.</p>
+        </section>
+
+        <!-- Propiedad de transición -->
+        <section>
+            <h2>Propiedad de transición</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded transition-colors hover:bg-yellow-400 hover:scale-125"></div>
+            </div>
+            <p>Limita la transición a propiedades de color: el color cambia suave, pero la escala salta.</p>
+        </section>
+
+        <!-- Duración de transición -->
+        <section>
+            <h2>Duración de transición</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded transition duration-500 hover:bg-yellow-400 hover:scale-125"></div>
+            </div>
+            <p>Hace que la transición dure quinientos milisegundos, un ritmo moderado y claramente perceptible.</p>
+        </section>
+
+        <!-- Función de temporización -->
+        <section>
+            <h2>Función de temporización</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded transition duration-500 ease-in hover:bg-yellow-400 hover:scale-125"></div>
+            </div>
+            <p>Aplica una curva que empieza lenta y gana velocidad hasta el final, con sensación de aceleración.</p>
+        </section>
+
+        <!-- Retraso de transición -->
+        <section>
+            <h2>Retraso de transición</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded transition delay-200 hover:bg-yellow-400 hover:scale-125"></div>
+            </div>
+            <p>Hace que la transición espere doscientos milisegundos antes de empezar, útil para escalonar efectos.</p>
+        </section>
+
+        <!-- Animaciones -->
+        <section>
+            <h2>Animaciones</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-spin"></div>
+            </div>
+            <p>Hace girar el elemento 360 grados en bucle infinito, típico de indicadores de carga.</p>
+        </section>
+
+        <!-- Nombre de la animación -->
+        <section>
+            <h2>Nombre de la animación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-[wiggle_1s_ease-in-out_infinite]"></div>
+            </div>
+            <p>Aplica un @keyframes propio llamado wiggle con duración de un segundo y repetición infinita.</p>
+        </section>
+
+        <!-- Duración de la animación -->
+        <section>
+            <h2>Duración de la animación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-[spin_0.3s_linear_infinite]"></div>
+            </div>
+            <p>Reutiliza la animación spin con duración de 0.3 segundos y velocidad constante, mucho más rápida.</p>
+        </section>
+
+        <!-- Retraso de la animación -->
+        <section>
+            <h2>Retraso de la animación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-bounce [animation-delay:0.5s]"></div>
+            </div>
+            <p>Retrasa medio segundo el inicio de la animación, para coordinar varios elementos.</p>
+        </section>
+
+        <!-- Cuenta de iteraciones -->
+        <section>
+            <h2>Cuenta de iteraciones</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-[wiggle_1s_ease-in-out] [animation-iteration-count:infinite]"></div>
+            </div>
+            <p>Repite la animación sin fin, en lugar de ejecutarla una sola vez.</p>
+        </section>
+
+        <!-- Dirección de la animación -->
+        <section>
+            <h2>Dirección de la animación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-[slide-x_1s_linear_infinite] [animation-direction:alternate]"></div>
+            </div>
+            <p>Hace avanzar y retroceder la animación en cada ciclo, con movimiento de ida y vuelta.</p>
+        </section>
+
+        <!-- Modo de relleno -->
+        <section>
+            <h2>Modo de relleno</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-[fade-in_2s_ease-out] [animation-fill-mode:forwards]"></div>
+            </div>
+            <p>Mantiene los estilos del último fotograma al terminar la animación.</p>
+        </section>
+
+        <!-- Estado de reproducción -->
+        <section>
+            <h2>Estado de reproducción</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-spin [animation-play-state:paused]"></div>
+            </div>
+            <p>Detiene la animación en su fotograma actual, pudiendo reanudarse después.</p>
+        </section>
+
+        <!-- Temporización de animación -->
+        <section>
+            <h2>Temporización de animación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-[slide-x_1.5s_infinite] [animation-timing-function:ease-out] [animation-direction:alternate]"></div>
+            </div>
+            <p>Define una curva rápida al inicio y lenta al final, con un cierre suave.</p>
+        </section>
+
+        <!-- Animación de giro/pulso -->
+        <section>
+            <h2>Animación de giro/pulso</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-pulse"></div>
+            </div>
+            <p>Alterna suavemente la opacidad en bucle infinito, usada en esqueletos de carga.</p>
+        </section>
+
+        <!-- Animación de rebote -->
+        <section>
+            <h2>Animación de rebote</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-bounce"></div>
+            </div>
+            <p>Hace saltar el elemento arriba y abajo con un rebote natural, ideal para llamar la atención.</p>
+        </section>
+
+        <!-- Animación de ping -->
+        <section>
+            <h2>Animación de ping</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="relative w-16 h-16">
+                    <div class="absolute inset-0 bg-pink-400 rounded-full animate-ping"></div>
+                    <div class="absolute inset-0 bg-pink-500 rounded-full"></div>
+                </div>
+            </div>
+            <p>Crea una onda que crece mientras se desvanece, muy usada para notificaciones y actividad en tiempo real.</p>
+        </section>
+
+        <!-- Animación de escala -->
+        <section>
+            <h2>Animación de escala</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-scale-y"></div>
+            </div>
+            <p>Personalizada definida en @theme: escala el elemento en el eje vertical.</p>
+        </section>
+
+        <!-- Sin animación -->
+        <section>
+            <h2>Sin animación</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-spin animate-none"></div>
+            </div>
+            <p>Elimina cualquier animación aplicada, útil para desactivarla en ciertos breakpoints o con movimiento reducido.</p>
+        </section>
+
+        <!-- Animación inversa -->
+        <section>
+            <h2>Animación inversa</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-spin [animation-direction:reverse]"></div>
+            </div>
+            <p>Reproduce la animación en sentido inverso, del último fotograma al primero.</p>
+        </section>
+
+        <!-- Zoom -->
+        <section>
+            <h2>Zoom</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-zoom-in"></div>
+            </div>
+            <p>Personalizada: el elemento aparece creciendo desde un tamaño menor hasta el normal.</p>
+        </section>
+
+        <!-- Deslizamiento -->
+        <section>
+            <h2>Deslizamiento</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-slide-up"></div>
+            </div>
+            <p>Personalizada: el elemento se desliza hacia arriba hasta su posición final.</p>
+        </section>
+
+        <!-- Desvanecimiento -->
+        <section>
+            <h2>Desvanecimiento</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-fade-in"></div>
+            </div>
+            <p>Personalizada: el elemento pasa de transparente a opaco de forma progresiva.</p>
+        </section>
+
+        <!-- Rotación animada -->
+        <section>
+            <h2>Rotación animada</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-rotate-45"></div>
+            </div>
+            <p>Personalizada: el elemento rota hasta cuarenta y cinco grados durante la animación.</p>
+        </section>
+
+        <!-- Deslizamiento y desvanecimiento -->
+        <section>
+            <h2>Deslizamiento y desvanecimiento</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-slide-fade-up"></div>
+            </div>
+            <p>Personalizada: combina un deslizamiento hacia arriba con un desvanecimiento de entrada.</p>
+        </section>
+
+        <!-- Rebote y escala -->
+        <section>
+            <h2>Rebote y escala</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-bounce-scale-down"></div>
+            </div>
+            <p>Personalizada: combina un rebote con una reducción de escala del elemento.</p>
+        </section>
+
+        <!-- Volteo -->
+        <section>
+            <h2>Volteo</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-flip-x"></div>
+            </div>
+            <p>Personalizada: voltea el elemento sobre su eje horizontal, como una tarjeta que gira.</p>
+        </section>
+
+        <!-- Pulso lento -->
+        <section>
+            <h2>Pulso lento</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-pulse [animation-duration:3s]"></div>
+            </div>
+            <p>Se logra con animate-pulse más una duración personalizada, obteniendo un pulso más lento.</p>
+        </section>
+
+        <!-- Temblor -->
+        <section>
+            <h2>Temblor</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-wiggle-slow"></div>
+            </div>
+            <p>Personalizada: balanceo o temblor lateral con ritmo lento.</p>
+        </section>
+
+        <!-- Parpadeo -->
+        <section>
+            <h2>Parpadeo</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-blink-slow"></div>
+            </div>
+            <p>Personalizada: parpadeo de opacidad con ritmo lento.</p>
+        </section>
+
+        <!-- Deslizamiento y rebote -->
+        <section>
+            <h2>Deslizamiento y rebote</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-slide-bounce-up"></div>
+            </div>
+            <p>Personalizada: se desliza hacia arriba terminando con un pequeño rebote.</p>
+        </section>
+
+        <!-- Latido -->
+        <section>
+            <h2>Latido</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-heartbeat-slow"></div>
+            </div>
+            <p>Personalizada: efecto de latido que agranda y reduce el elemento lentamente.</p>
+        </section>
+
+        <!-- Goma -->
+        <section>
+            <h2>Goma</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-rubberband-slow"></div>
+            </div>
+            <p>Personalizada: efecto de goma elástica que estira y encoge el elemento lentamente.</p>
+        </section>
+
+        <!-- Sacudida -->
+        <section>
+            <h2>Sacudida</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-head-shake-slow"></div>
+            </div>
+            <p>Personalizada: sacudida lateral que imita un gesto de negación, en versión lenta.</p>
+        </section>
+
+        <!-- Gelatina -->
+        <section>
+            <h2>Gelatina</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-jello-slow"></div>
+            </div>
+            <p>Personalizada: deformación ondulante como gelatina, con ritmo lento.</p>
+        </section>
+
+        <!-- Tada -->
+        <section>
+            <h2>Tada</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-tada-slow"></div>
+            </div>
+            <p>Personalizada: efecto tada que escala y balancea el elemento para llamar la atención.</p>
+        </section>
+
+        <!-- Rebote desde la izquierda -->
+        <section>
+            <h2>Rebote desde la izquierda</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-bounce-in-left-slow"></div>
+            </div>
+            <p>Personalizada: entra rebotando desde la izquierda con ritmo lento.</p>
+        </section>
+
+        <!-- Rebote desde la derecha -->
+        <section>
+            <h2>Rebote desde la derecha</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-bounce-in-right-slow"></div>
+            </div>
+            <p>Personalizada: entra rebotando desde la derecha con ritmo lento.</p>
+        </section>
+
+        <!-- Rebote desde arriba -->
+        <section>
+            <h2>Rebote desde arriba</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-bounce-in-up-slow"></div>
+            </div>
+            <p>Personalizada: entra rebotando desde abajo hacia arriba con ritmo lento.</p>
+        </section>
+
+        <!-- Rebote desde abajo -->
+        <section>
+            <h2>Rebote desde abajo</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-bounce-in-down-slow"></div>
+            </div>
+            <p>Personalizada: entra rebotando desde arriba hacia abajo con ritmo lento.</p>
+        </section>
+
+        <!-- Desvanecimiento desde la izquierda -->
+        <section>
+            <h2>Desvanecimiento desde la izquierda</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-fade-in-left-slow"></div>
+            </div>
+            <p>Personalizada: aparece desvaneciéndose desde la izquierda con ritmo lento.</p>
+        </section>
+
+        <!-- Desvanecimiento desde la derecha -->
+        <section>
+            <h2>Desvanecimiento desde la derecha</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-fade-in-right-slow"></div>
+            </div>
+            <p>Personalizada: aparece desvaneciéndose desde la derecha con ritmo lento.</p>
+        </section>
+
+        <!-- Desvanecimiento desde arriba -->
+        <section>
+            <h2>Desvanecimiento desde arriba</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-fade-in-up-slow"></div>
+            </div>
+            <p>Personalizada: aparece desvaneciéndose desde abajo hacia arriba con ritmo lento.</p>
+        </section>
+
+        <!-- Desvanecimiento desde abajo -->
+        <section>
+            <h2>Desvanecimiento desde abajo</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-fade-in-down-slow"></div>
+            </div>
+            <p>Personalizada: aparece desvaneciéndose desde arriba hacia abajo con ritmo lento.</p>
+        </section>
+
+        <!-- Deslizamiento desde la izquierda -->
+        <section>
+            <h2>Deslizamiento desde la izquierda</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-slide-in-left-slow"></div>
+            </div>
+            <p>Personalizada: entra deslizándose desde la izquierda con ritmo lento.</p>
+        </section>
+
+        <!-- Deslizamiento desde la derecha -->
+        <section>
+            <h2>Deslizamiento desde la derecha</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-slide-in-right-slow"></div>
+            </div>
+            <p>Personalizada: entra deslizándose desde la derecha con ritmo lento.</p>
+        </section>
+
+        <!-- Deslizamiento desde arriba -->
+        <section>
+            <h2>Deslizamiento desde arriba</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-slide-in-up-slow"></div>
+            </div>
+            <p>Personalizada: entra deslizándose hacia arriba con ritmo lento.</p>
+        </section>
+
+        <!-- Deslizamiento desde abajo -->
+        <section>
+            <h2>Deslizamiento desde abajo</h2>
+            <div class="m-3 h-28 flex items-center justify-center overflow-hidden">
+                <div class="w-16 h-16 bg-pink-400 rounded animate-slide-in-down-slow"></div>
+            </div>
+            <p>Personalizada: entra deslizándose hacia abajo con ritmo lento.</p>
+        </section>
+
+    </main>
+
+</body>
+</html>

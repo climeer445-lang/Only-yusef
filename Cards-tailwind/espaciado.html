@@ -1,0 +1,202 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="shortcut icon" href="images/icon-removebg-preview.png" type="images/jpg">
+    <title>Espaciado y dimensiones</title>
+</head>
+
+<body class="bg-[#FFF9E8] text-[#665B43]">
+
+  
+   
+    <nav class="bg-[#FFEFD5] p-4">
+        <ul class="flex flex-wrap justify-center gap-6 text-sm">
+           <li><a class="hover:text-blue-200" href="index.html">inicio</a></li>
+                <li><a class="hover:text-blue-200" href="colores.html">Colores,bordes y efectos</a></li>
+                <li><a class="hover:text-blue-200" href="espaciado.html">Espaciado y dimensiones</a></li>
+                <li><a class="hover:text-blue-200" href="flexbox.html">Flexbox y Grid</a></li>
+                <li><a class="hover:text-blue-200" href="posicion.html">Posicion e interaccion</a></li>
+                <li><a class="hover:text-blue-200" href="transformaciones.html">transiciones y animaciones</a></li>
+                <li><a class="hover:text-blue-200" href="tipografiaytexto.html">tipografia y texto</a></li>
+
+        </ul>
+    </nav>
+
+
+    <main class="max-w-7xl mx-auto p-6">
+
+        <div class="text-center mb-8">
+            <img src="images/usagui2.gif" alt="Usagi" class=" object-contain mx-auto">
+
+            <h1 class="text-4xl font-bold text-[#A88B45] mt-3">
+                Espaciado y dimensiones
+            </h1>
+
+            <p class="mt-2 text-[#85734F]">
+                Espacio y tamaño
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+            <!-- Margen -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Margen</h2>
+                <p class="p-3">Agrega un espacio exterior de 4 unidades alrededor del elemento, separándolo de otros elementos.</p>
+                <div class="bg-[#E8DDAF] p-2 m-3 rounded">
+                    <div class="bg-[#F5C85B] m-4 p-2 text-[#665B43] rounded">m-4</div>
+                </div>
+            </section>
+
+            <!-- Margen superior -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Margen superior</h2>
+                <p class="p-3">Agrega un espacio exterior en la parte superior del elemento, separándolo de lo que tiene encima.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] mt-8 p-2 text-[#665B43] rounded">mt-8</div>
+                </div>
+            </section>
+
+            <!-- Margen derecho -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Margen derecho</h2>
+                <p class="p-3">Agrega un espacio exterior en el lado derecho del elemento.</p>
+                <div class="bg-[#E8DDAF] p-2 flex rounded">
+                    <div class="bg-[#F5C85B] mr-12 p-2 text-[#665B43] rounded">mr-12</div>
+                    <div class="bg-[#D9C58C] p-2 rounded">Otro</div>
+                </div>
+            </section>
+
+            <!-- Margen inferior -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Margen inferior</h2>
+                <p class="p-3">Agrega un espacio exterior debajo del elemento, separándolo del contenido siguiente.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] mb-16 p-2 text-[#665B43] rounded">mb-16</div>
+                    <div class="bg-[#D9C58C] p-2 rounded">Otro elemento</div>
+                </div>
+            </section>
+
+            <!-- Margen izquierdo -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Margen izquierdo</h2>
+                <p class="p-3">Agrega un espacio exterior en el lado izquierdo del elemento.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] ml-20 p-2 text-[#665B43] rounded">ml-20</div>
+                </div>
+            </section>
+
+            <!-- Relleno -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Relleno</h2>
+                <p class="p-3">Agrega espacio interior entre el contenido y los bordes del elemento, en sus cuatro lados.</p>
+                <div class="bg-[#E8DDAF] rounded">
+                    <div class="bg-[#F5C85B] p-6 text-[#665B43] rounded">p-6</div>
+                </div>
+            </section>
+
+            <!-- Relleno superior -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Relleno superior</h2>
+                <p class="p-3">Agrega espacio interior en la parte superior del elemento.</p>
+                <div class="bg-[#E8DDAF] rounded">
+                    <div class="bg-[#F5C85B] pt-10 text-[#665B43] rounded">pt-10</div>
+                </div>
+            </section>
+
+            <!-- Relleno derecho -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Relleno derecho</h2>
+                <p class="p-3">Agrega espacio interior en el lado derecho. En Tailwind v4 se utiliza pr-8.</p>
+                <div class="bg-[#E8DDAF] rounded">
+                    <div class="bg-[#F5C85B] pr-8 text-[#665B43] rounded">pr-8</div>
+                </div>
+            </section>
+
+            <!-- Relleno inferior -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Relleno inferior</h2>
+                <p class="p-3">Agrega espacio interior en la parte inferior del elemento. En Tailwind v4 se utiliza pb-12.</p>
+                <div class="bg-[#E8DDAF] rounded">
+                    <div class="bg-[#F5C85B] pb-12 text-[#665B43] rounded">pb-12</div>
+                </div>
+            </section>
+
+            <!-- Relleno izquierdo -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Relleno izquierdo</h2>
+                <p class="p-3">Agrega espacio interior en el lado izquierdo. En Tailwind v4 se utiliza pl-16.</p>
+                <div class="bg-[#E8DDAF] rounded">
+                    <div class="bg-[#F5C85B] pl-16 text-[#665B43] rounded">pl-16</div>
+                </div>
+            </section>
+
+            <!-- Ancho -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Ancho</h2>
+                <p class="p-3">Establece el ancho del elemento en el cincuenta por ciento del espacio disponible.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] w-1/2 p-2 text-[#665B43] rounded">w-1/2</div>
+                </div>
+            </section>
+
+            <!-- Ancho mínimo -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Ancho mínimo</h2>
+                <p class="p-3">Establece un ancho mínimo de 16rem para evitar que el elemento se reduzca demasiado.</p>
+                <div class="bg-[#E8DDAF] p-2 overflow-x-auto rounded">
+                    <div class="bg-[#F5C85B] min-w-64 p-2 text-[#665B43] rounded">min-w-64</div>
+                </div>
+            </section>
+
+            <!-- Ancho máximo -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Ancho máximo</h2>
+                <p class="p-3">Limita el ancho máximo del elemento a 48rem, evitando que crezca demasiado.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] max-w-3xl p-2 text-[#665B43] rounded">max-w-3xl</div>
+                </div>
+            </section>
+
+            <!-- Altura -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Altura</h2>
+                <p class="p-3">Establece una altura fija de 16rem para el elemento.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] h-64 flex items-center justify-center text-[#665B43] rounded">h-64</div>
+                </div>
+            </section>
+
+            <!-- Altura mínima -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Altura mínima</h2>
+                <p class="p-3">Establece como altura mínima el tamaño de la pantalla visible.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] min-h-screen p-2 text-[#665B43] rounded">
+                        min-h-screen
+                    </div>
+                </div>
+            </section>
+
+            <!-- Altura máxima -->
+            <section class="bg-[#F8EDC9] border border-[#E8D69D] rounded-xl shadow-md overflow-hidden">
+                <h2 class="bg-[#F2DFA7] p-3 font-bold">Altura máxima</h2>
+                <p class="p-3">Limita la altura del elemento a 24rem para que no crezca más allá de ese tamaño.</p>
+                <div class="bg-[#E8DDAF] p-2 rounded">
+                    <div class="bg-[#F5C85B] max-h-96 overflow-auto p-2 text-[#665B43] rounded">
+                        max-h-96
+                        <p>Contenido de ejemplo para observar el límite de altura.</p>
+                        <p>Más contenido dentro del elemento.</p>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </main>
+
+</body>
+</html>
