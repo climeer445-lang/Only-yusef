@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galeria de perros</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="encabezado">
+      <h1>Galeria de perros</h1>
+
+      <div class="filtro">
+        <label for="selector-raza">Raza</label>
+        <select id="selector-raza">
+          <option value="">Todas las razas</option>
+        </select>
+      </div>
+    </header>
+
+    <main>
+      <p id="contador" class="contador"></p>
+    
+      <!-- mensaje cde carga -->
+      <p id="mensaje-carga" class="mensaje mensaje-carga" role="status" hidden>Cargando imagenes...</p>
+      <div id="mensaje-error" class="mensaje mensaje-error" role="alert" hidden>
+        <span id="texto-error"></span>
+        <button id="boton-reintentar" type="button">Reintentar</button>
+      </div>
+
+      <section id="galeria" class="galeria" aria-label="Fotos de perros"></section>
+
+      <div class="acciones">
+        <button id="boton-mas" type="button">Traer 5 imsgenes mas</button>
+      </div>
+    </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
